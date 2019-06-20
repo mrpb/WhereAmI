@@ -43,6 +43,8 @@
     <Content Include="src\styles\Dashboard.css" />
     <Content Include="src\styles\MenuBar.css" />
     <Content Include="src\styles\StatusColumn.css" />
+    <Content Include="src\styles\UserStatusItem.css" />
+    <Content Include="src\UserStatusItem.tsx" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
