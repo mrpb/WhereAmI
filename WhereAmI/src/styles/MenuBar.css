@@ -1,6 +1,7 @@
 .menu-bar {
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding: 5px;
     background-color: navy;
+    rounded: false;
 }

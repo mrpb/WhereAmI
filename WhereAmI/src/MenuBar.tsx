@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Paper from '@material-ui/core/Paper';
 import './styles/MenuBar.css';
 
 class MenuBar extends Component {
     render() {
         return (
-            <div className='menu-bar'></div>
+            <Paper className='menu-bar' square={true} elevation={4} />
         );
     }
 }

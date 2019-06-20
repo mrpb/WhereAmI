@@ -1,7 +1,10 @@
 .status-column {
-    width: 24%;
-    height: 800px;
+    width: 100%;
+    height: 100px;
     background-color: lime;
     display: inline-block;
+}
+
+.column-content {
     margin: 5px;
 }
