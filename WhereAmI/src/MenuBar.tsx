@@ -5,7 +5,7 @@ import './styles/MenuBar.css';
 class MenuBar extends Component {
     render() {
         return (
-            <Paper className='menu-bar' square={true} elevation={4} />
+            <Paper className='menu-bar' square={true} elevation={1} />
         );
     }
 }
