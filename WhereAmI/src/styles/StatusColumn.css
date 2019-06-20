@@ -1,0 +1,7 @@
+.status-column {
+    width: 24%;
+    height: 800px;
+    background-color: lime;
+    display: inline-block;
+    margin: 5px;
+}
