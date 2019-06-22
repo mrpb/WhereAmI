@@ -36,6 +36,7 @@
     <Content Include="public\index.html" />
     <Content Include="public\manifest.json" />
     <Content Include="README.md" />
+    <Content Include="src\StatusMarker.tsx" />
     <Content Include="src\styles\App.css" />
     <Content Include="src\styles\index.css" />
     <Content Include="src\logo.svg" />
@@ -60,6 +61,7 @@
     <TypeScriptCompile Include="src\react-app-env.d.ts" />
     <TypeScriptCompile Include="src\serviceWorker.ts" />
     <TypeScriptCompile Include="src\StatusColumn.tsx" />
+    <TypeScriptCompile Include="src\Tag.tsx" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
