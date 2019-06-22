@@ -8,7 +8,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className='dashboard'>
-                <MenuBar />
+                <MenuBar availablePeopleCount={1} remotePeopleCount={2} absentPeopleCount={3} />
                 
                 <Grid container className='status-field' spacing={2} justify="center">
                     <Grid item xs={12} sm={3}>
