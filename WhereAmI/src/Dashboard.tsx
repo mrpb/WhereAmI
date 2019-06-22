@@ -12,16 +12,16 @@ class Dashboard extends Component {
                 
                 <Grid container className='status-field' spacing={2} justify="center">
                     <Grid item xs={12} sm={3}>
-                        <StatusColumn title="Available"/>
+                        <StatusColumn />
                     </Grid>
                     <Grid item xs={12} sm={3}>
-                        <StatusColumn title="Home office"/>
+                        <StatusColumn />
                     </Grid>
                     <Grid item xs={12} sm={3}>
-                        <StatusColumn title="Out of office"/>
+                        <StatusColumn />
                     </Grid>
                     <Grid item xs={12} sm={3}>
-                        <StatusColumn title="Unknown"/>
+                        <StatusColumn />
                     </Grid>
                 </Grid>
             </div>

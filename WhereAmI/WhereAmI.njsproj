@@ -36,8 +36,8 @@
     <Content Include="public\index.html" />
     <Content Include="public\manifest.json" />
     <Content Include="README.md" />
-    <Content Include="src\App.css" />
-    <Content Include="src\index.css" />
+    <Content Include="src\styles\App.css" />
+    <Content Include="src\styles\index.css" />
     <Content Include="src\logo.svg" />
     <Content Include="src\MenuBar.tsx" />
     <Content Include="src\styles\Dashboard.css" />
