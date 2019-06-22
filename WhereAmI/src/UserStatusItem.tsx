@@ -80,16 +80,16 @@ class UserStatusItem extends Component<IUserStatusItemProps> {
     }
 
     private getStatusText(status: UserStatus) {
-        if (status == UserStatus.Office) return 'available';
-        if (status == UserStatus.Remote) return 'remotely';
-        if (status == UserStatus.Absent) return 'absent';
+        if (status === UserStatus.Office) return 'available';
+        if (status === UserStatus.Remote) return 'remotely';
+        if (status === UserStatus.Absent) return 'absent';
         return 'unknown';
     }
 
     private getStatusColor(status: UserStatus) {
-        if (status == UserStatus.Office) return 'green';
-        if (status == UserStatus.Remote) return 'blue';
-        if (status == UserStatus.Absent) return 'red';
+        if (status === UserStatus.Office) return 'green';
+        if (status === UserStatus.Remote) return 'blue';
+        if (status === UserStatus.Absent) return 'red';
         return 'gray';
     }
 }
