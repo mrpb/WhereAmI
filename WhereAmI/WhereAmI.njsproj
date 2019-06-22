@@ -41,10 +41,7 @@
     <Content Include="src\styles\index.css" />
     <Content Include="src\logo.svg" />
     <Content Include="src\MenuBar.tsx" />
-    <Content Include="src\styles\Dashboard.css" />
-    <Content Include="src\styles\MenuBar.css" />
-    <Content Include="src\styles\StatusColumn.css" />
-    <Content Include="src\styles\UserStatusItem.css" />
+    <Content Include="src\UserStatus.tsx" />
     <Content Include="src\UserStatusItem.tsx" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
@@ -62,6 +59,7 @@
     <TypeScriptCompile Include="src\serviceWorker.ts" />
     <TypeScriptCompile Include="src\StatusColumn.tsx" />
     <TypeScriptCompile Include="src\Tag.tsx" />
+    <TypeScriptCompile Include="src\User.tsx" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

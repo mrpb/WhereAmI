@@ -4,6 +4,8 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
 import Tag from './Tag';
 import StatusMarker from './StatusMarker';
+import UserStatus from './UserStatus';
+import User from './User';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -50,14 +52,8 @@ const styles = (theme: Theme) =>
         }
     });
 
-export enum UserStatus {
-    Office,
-    Remote,
-    Absent,
-	Unknown
-}
-
 export interface IUserStatusItemProps extends WithStyles<typeof styles> {
+    user: User,
     status: UserStatus
 }
 
@@ -72,14 +68,11 @@ class UserStatusItem extends Component<IUserStatusItemProps> {
             <div className={classes.card}>
                 <div className={classes.cardContent}>
 					<Avatar className={classes.avatarRing}>
-                        <Avatar className={classes.avatar}
-								src='https://vignette.wikia.nocookie.net/james-camerons-avatar/images/d/d4/Neytiri_Profil.jpg/revision/latest?cb=20100226001342&path-prefix=pl'/>
+                        <Avatar className={classes.avatar} src={this.props.user.avatarUrl} />
                     </Avatar>
-                    <StatusMarker className={classes.statusDot} color={`${statusColor}`}/>
-                    <div className={classes.initials}>PLO</div>
-					<div className={classes.userName}>
-						Piotr Krol
-					</div>
+                    <StatusMarker className={classes.statusDot} color={`${statusColor}`} />
+                    <div className={classes.initials}>{this.props.user.initials}</div>
+                    <div className={classes.userName}>{this.props.user.name}</div>
                     <Tag className={classes.status} text={statusText} color={`${statusColor}`}/>
 				</div>
             </div>
