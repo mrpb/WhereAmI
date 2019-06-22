@@ -10,13 +10,14 @@ import User from './User';
 const styles = (theme: Theme) =>
     createStyles({
         dashboard: {
-            height: '100%'
         },
         statusField: {
             width: '100%',
             height: '100%',
-            padding: 10,
             flexGrow: 1,
+            paddingTop: theme.spacing(3),
+            paddingLeft: theme.spacing(7),
+            paddingRight: theme.spacing(7)
         }
     });
 
@@ -38,14 +39,14 @@ class Dashboard extends Component<IDashboardProps> {
                     remotePeopleCount={remoteUsers.length}
                     absentPeopleCount={absentUsers.length} />
 
-                <Grid container className={classes.statusField} spacing={1} justify="center">
-                    <Grid item xs={1} sm={3}>
+                <Grid container className={classes.statusField} spacing={4} justify="center">
+                    <Grid item xs>
                         <StatusColumn status={UserStatus.Office} users={availableUsers} />
                     </Grid>
-                    <Grid item xs={1} sm={3}>
+                    <Grid item xs>
                         <StatusColumn status={UserStatus.Remote} users={remoteUsers} />
                     </Grid>
-                    <Grid item xs={1} sm={3}>
+                    <Grid item xs>
                         <StatusColumn status={UserStatus.Absent} users={absentUsers} />
                     </Grid>
                 </Grid>

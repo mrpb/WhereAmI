@@ -15,7 +15,7 @@ const styles = (theme: Theme) =>
             alignItems: 'center'
         },
         title: {
-            marginLeft: theme.spacing(3),
+            marginLeft: theme.spacing(8),
             fontWeight: theme.typography.fontWeightBold
         },
         date: {
@@ -23,11 +23,12 @@ const styles = (theme: Theme) =>
             marginLeft: theme.spacing(1),
         },
         availability: {
-            marginRight: theme.spacing(3),
+            marginRight: theme.spacing(12),
         },
         availabilityTag: {
             display: 'inline-block',
-            margin: 5
+            marginRight: 10,
+            marginLeft: 10
         }
     });
 
