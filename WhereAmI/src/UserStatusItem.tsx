@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Avatar, Theme } from '@material-ui/core';
 import { WithStyles, withStyles, createStyles } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
+import { Draggable } from 'react-beautiful-dnd';
 import Tag from './Tag';
 import StatusMarker from './StatusMarker';
 import UserStatus from './UserStatus';
@@ -65,17 +66,21 @@ class UserStatusItem extends Component<IUserStatusItemProps> {
         var statusColor = this.getStatusColor(this.props.status);
 
         return (
-            <div className={classes.card}>
-                <div className={classes.cardContent}>
-					<Avatar className={classes.avatarRing}>
-                        <Avatar className={classes.avatar} src={this.props.user.avatarUrl} />
-                    </Avatar>
-                    <StatusMarker className={classes.statusDot} color={`${statusColor}`} />
-                    <div className={classes.initials}>{this.props.user.initials}</div>
-                    <div className={classes.userName}>{this.props.user.name}</div>
-                    <Tag className={classes.status} text={statusText} color={`${statusColor}`}/>
-				</div>
-            </div>
+            <Draggable draggableId={this.props.user.initials} index={0}>
+                {(provided, snapshot) => (
+                    <div className={classes.card} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                        <div className={classes.cardContent}>
+                            <Avatar className={classes.avatarRing}>
+                                <Avatar className={classes.avatar} src={this.props.user.avatarUrl} />
+                            </Avatar>
+                            <StatusMarker className={classes.statusDot} color={`${statusColor}`} />
+                            <div className={classes.initials}>{this.props.user.initials}</div>
+                            <div className={classes.userName}>{this.props.user.name}</div>
+                            <Tag className={classes.status} text={statusText} color={`${statusColor}`} />
+                        </div>
+                    </div>
+                )}
+            </Draggable>
         );
     }
 

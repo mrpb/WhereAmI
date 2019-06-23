@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Theme } from '@material-ui/core';
 import { WithStyles, withStyles, createStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { DragDropContext } from 'react-beautiful-dnd';
 import StatusColumn from './StatusColumn';
 import MenuBar from './MenuBar';
 import UserStatus from './UserStatus';
@@ -39,19 +40,25 @@ class Dashboard extends Component<IDashboardProps> {
                     remotePeopleCount={remoteUsers.length}
                     absentPeopleCount={absentUsers.length} />
 
-                <Grid container className={classes.statusField} spacing={4} justify="center">
-                    <Grid item xs>
-                        <StatusColumn status={UserStatus.Office} users={availableUsers} />
+                <DragDropContext onDragEnd={this.onDragEnd}>
+                    <Grid container className={classes.statusField} spacing={4} justify="center">
+                        <Grid item xs>
+                            <StatusColumn status={UserStatus.Office} users={availableUsers} />
+                        </Grid>
+                        <Grid item xs>
+                            <StatusColumn status={UserStatus.Remote} users={remoteUsers} />
+                        </Grid>
+                        <Grid item xs>
+                            <StatusColumn status={UserStatus.Absent} users={absentUsers} />
+                        </Grid>
                     </Grid>
-                    <Grid item xs>
-                        <StatusColumn status={UserStatus.Remote} users={remoteUsers} />
-                    </Grid>
-                    <Grid item xs>
-                        <StatusColumn status={UserStatus.Absent} users={absentUsers} />
-                    </Grid>
-                </Grid>
+                </DragDropContext>
             </div>
         );
+    }
+
+    private onDragEnd() {
+
     }
 
     private getAvailableUsers(): Array<User> {

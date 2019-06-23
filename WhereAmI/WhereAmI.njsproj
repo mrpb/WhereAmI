@@ -37,7 +37,6 @@
     <Content Include="public\manifest.json" />
     <Content Include="README.md" />
     <Content Include="src\StatusMarker.tsx" />
-    <Content Include="src\styles\App.css" />
     <Content Include="src\styles\index.css" />
     <Content Include="src\logo.svg" />
     <Content Include="src\MenuBar.tsx" />
@@ -51,8 +50,6 @@
     <Folder Include="src\styles\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\App.test.tsx" />
-    <TypeScriptCompile Include="src\App.tsx" />
     <TypeScriptCompile Include="src\Dashboard.tsx" />
     <TypeScriptCompile Include="src\index.tsx" />
     <TypeScriptCompile Include="src\react-app-env.d.ts" />
