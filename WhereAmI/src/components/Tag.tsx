@@ -22,7 +22,7 @@ export interface ITagProps extends WithStyles<typeof styles> {
 }
 
 class Tag extends Component<ITagProps> {
-    render() {
+    render = () => {
         const { classes } = this.props;
 
         const style = {

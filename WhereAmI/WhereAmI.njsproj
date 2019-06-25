@@ -36,27 +36,31 @@
     <Content Include="public\index.html" />
     <Content Include="public\manifest.json" />
     <Content Include="README.md" />
-    <Content Include="src\StatusMarker.tsx" />
+    <Content Include="src\components\StatusMarker.tsx" />
+    <Content Include="src\controllers\UserStatusController.tsx" />
     <Content Include="src\styles\index.css" />
     <Content Include="src\logo.svg" />
-    <Content Include="src\MenuBar.tsx" />
-    <Content Include="src\UserStatus.tsx" />
-    <Content Include="src\UserStatusItem.tsx" />
+    <Content Include="src\components\MenuBar.tsx" />
+    <Content Include="src\model\UserStatus.tsx" />
+    <Content Include="src\components\UserStatusItem.tsx" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="src\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\model\" />
+    <Folder Include="src\controllers\" />
     <Folder Include="src\styles\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\Dashboard.tsx" />
+    <TypeScriptCompile Include="src\components\Dashboard.tsx" />
     <TypeScriptCompile Include="src\index.tsx" />
     <TypeScriptCompile Include="src\react-app-env.d.ts" />
     <TypeScriptCompile Include="src\serviceWorker.ts" />
-    <TypeScriptCompile Include="src\StatusColumn.tsx" />
-    <TypeScriptCompile Include="src\Tag.tsx" />
-    <TypeScriptCompile Include="src\User.tsx" />
+    <TypeScriptCompile Include="src\components\StatusColumn.tsx" />
+    <TypeScriptCompile Include="src\components\Tag.tsx" />
+    <TypeScriptCompile Include="src\model\User.tsx" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

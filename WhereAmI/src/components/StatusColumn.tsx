@@ -4,8 +4,8 @@ import { WithStyles, withStyles, createStyles } from '@material-ui/core/styles';
 import { Theme } from '@material-ui/core';
 import { Droppable } from 'react-beautiful-dnd';
 import UserStatusItem from './UserStatusItem';
-import UserStatus from './UserStatus';
-import User from './User';
+import UserStatus from '../model/UserStatus';
+import User from '../model/User';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -17,7 +17,7 @@ export interface IStatusColumnProps extends WithStyles<typeof styles> {
 }
 
 class StatusColumn extends Component<IStatusColumnProps> {
-    render() {
+    render = () => {
         return (
             <Droppable droppableId={this.props.status.toString()} type='USER'>
                 {(provided, snapshot) => (
@@ -28,7 +28,7 @@ class StatusColumn extends Component<IStatusColumnProps> {
                                     {
                                         this.props.users.map((user) => {
                                             return (
-                                                <Grid item xs={12} sm={12}>
+                                                <Grid key={user.initials} item xs={12} sm={12}>
                                                     <UserStatusItem user={user} status={this.props.status} />
                                                 </Grid>
                                             );

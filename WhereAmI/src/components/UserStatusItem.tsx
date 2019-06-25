@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Avatar, Theme } from '@material-ui/core';
 import { WithStyles, withStyles, createStyles } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
 import { Draggable } from 'react-beautiful-dnd';
 import Tag from './Tag';
 import StatusMarker from './StatusMarker';
-import UserStatus from './UserStatus';
-import User from './User';
+import UserStatus from '../model/UserStatus';
+import User from '../model/User';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -24,7 +23,7 @@ const styles = (theme: Theme) =>
             width: 55,
             height: 55,
             margin: theme.spacing(1),
-            backgroundColor: red[500],
+            backgroundColor: '#fff',
         },
         cardContent: {
             padding: 10,
@@ -59,7 +58,7 @@ export interface IUserStatusItemProps extends WithStyles<typeof styles> {
 }
 
 class UserStatusItem extends Component<IUserStatusItemProps> {
-    render() {
+    render = () => {
         const { classes } = this.props;
 
         var statusText = this.getStatusText(this.props.status);
@@ -84,14 +83,14 @@ class UserStatusItem extends Component<IUserStatusItemProps> {
         );
     }
 
-    private getStatusText(status: UserStatus) {
+    private getStatusText = (status: UserStatus): string => {
         if (status === UserStatus.Office) return 'available';
         if (status === UserStatus.Remote) return 'remotely';
         if (status === UserStatus.Absent) return 'absent';
         return 'unknown';
     }
 
-    private getStatusColor(status: UserStatus) {
+    private getStatusColor = (status: UserStatus): string => {
         if (status === UserStatus.Office) return 'green';
         if (status === UserStatus.Remote) return 'blue';
         if (status === UserStatus.Absent) return 'red';

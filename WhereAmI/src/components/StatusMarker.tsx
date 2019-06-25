@@ -18,7 +18,7 @@ export interface IStatusMarkerProps extends WithStyles<typeof styles> {
 }
 
 class StatusMarker extends Component<IStatusMarkerProps> {
-    render() {
+    render = () => {
         const { classes } = this.props;
 
         const style = {

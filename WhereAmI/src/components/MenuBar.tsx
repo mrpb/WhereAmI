@@ -39,7 +39,7 @@ export interface IMenuBarProps extends WithStyles<typeof styles> {
 }
 
 class MenuBar extends Component<IMenuBarProps> {
-    render() {
+    render = () => {
         const { classes } = this.props;
 
         return (
